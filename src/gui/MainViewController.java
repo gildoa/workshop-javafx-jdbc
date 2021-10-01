@@ -65,6 +65,7 @@ public class MainViewController implements Initializable{
 		
 		T controller = loader.getController();
 		initializingAction.accept(controller);
+		
 		}catch(IOException e) {
 			Alerts.showAlert("IOException", "Error Loading View", e.getMessage(), Alert.AlertType.ERROR);
 		}
