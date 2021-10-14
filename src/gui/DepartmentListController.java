@@ -50,7 +50,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 		createDialogForm(obj, "/gui/DepartmentForm.fxml", parentStage);
 	}
 
-	//injeção de dependência
+	// injeção de dependência
 	public void setDepartmentService(DepartmentService service) {
 		this.service = service;
 	}
@@ -64,7 +64,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 		tableColumId.setCellValueFactory(new PropertyValueFactory<>("Id"));
 		tableColumName.setCellValueFactory(new PropertyValueFactory<>("Name"));	
 		
-		//Para a tableview acompanhar a altura da janela
+		// Para a tableview acompanhar a altura da janela
 		Stage stage = (Stage)Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
 	}
